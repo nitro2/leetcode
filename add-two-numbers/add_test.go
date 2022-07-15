@@ -3,6 +3,7 @@ package add
 import (
 	"testing"
 	"fmt"
+	"github.com/stretchr/testify/assert"
 )
 
 type ListNode struct {
@@ -36,6 +37,16 @@ func DisplayNode(l *ListNode) {
 	fmt.Println()
 }
 
+func ListNodeToString(l *ListNode) string {
+	var outString string
+	for l != nil {
+		fmt.Sprintf(outString, "%v -> ", l.Val)
+		l = l.Next
+	}
+	return outString
+}
+
+
 func TestAdd(t *testing.T) {
 	el := &linkedList{}
 	el.PushBack(&ListNode{Val: 4})
@@ -53,6 +64,7 @@ func TestAdd(t *testing.T) {
 	DisplayNode(in2.head)
 
 	out := addTwoNumbers(in1.head, in2.head)
+	
 	DisplayNode(out)
-
+	assert.Equal(t, ListNodeToString(el.head), ListNodeToString(out))
 }
