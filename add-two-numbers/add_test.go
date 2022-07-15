@@ -40,7 +40,7 @@ func DisplayNode(l *ListNode) {
 func ListNodeToString(l *ListNode) string {
 	var outString string
 	for l != nil {
-		fmt.Sprintf(outString, "%v -> ", l.Val)
+		outString += fmt.Sprintf("%v -> ", l.Val)
 		l = l.Next
 	}
 	return outString
@@ -51,20 +51,45 @@ func TestAdd(t *testing.T) {
 	el := &linkedList{}
 	el.PushBack(&ListNode{Val: 4})
 	el.PushBack(&ListNode{Val: 2})
-	DisplayNode(el.head)
+	// DisplayNode(el.head)
 
 	in1 := &linkedList{}
 	in1.PushBack(&ListNode{Val: 1})
 	in1.PushBack(&ListNode{Val: 1})
-	DisplayNode(in1.head)
+	// DisplayNode(in1.head)
 
 	in2 := &linkedList{}
 	in2.PushBack(&ListNode{Val: 3})
 	in2.PushBack(&ListNode{Val: 1})
-	DisplayNode(in2.head)
+	// DisplayNode(in2.head)
 
 	out := addTwoNumbers(in1.head, in2.head)
 	
-	DisplayNode(out)
+	// DisplayNode(out)
+	assert.Equal(t, ListNodeToString(el.head), ListNodeToString(out))
+}
+
+func TestAddUnalign(t *testing.T) {
+	in1 := &linkedList{}
+	in1.PushBack(&ListNode{Val: 1})
+	in1.PushBack(&ListNode{Val: 1})
+	in1.PushBack(&ListNode{Val: 2})
+	// DisplayNode(in1.head)
+
+	in2 := &linkedList{}
+	in2.PushBack(&ListNode{Val: 3})
+	in2.PushBack(&ListNode{Val: 1})
+	// DisplayNode(in2.head)
+
+	el := &linkedList{}
+	el.PushBack(&ListNode{Val: 4})
+	el.PushBack(&ListNode{Val: 2})
+	el.PushBack(&ListNode{Val: 2})
+	// DisplayNode(el.head)
+
+	
+	out := addTwoNumbers(in1.head, in2.head)
+	
+	// DisplayNode(out)
 	assert.Equal(t, ListNodeToString(el.head), ListNodeToString(out))
 }
