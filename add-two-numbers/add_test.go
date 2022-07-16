@@ -146,7 +146,7 @@ func TestRegression(t *testing.T) {
 			exp := createLinkListFromArray(test.expected)
 
 			out := addTwoNumbers(a.head, b.head)
-			
+
 			assert.Equal(t, ListNodeToString(exp.head), ListNodeToString(out))
 		})
 	}
