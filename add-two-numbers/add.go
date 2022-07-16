@@ -5,14 +5,14 @@
  *     Val int
  *     Next *ListNode
  * }
-*/
+ */
 
 package add
 
 func addTwoNumbers(l1 *ListNode, l2 *ListNode) *ListNode {
 	r := 0
 	n := &ListNode{}
-	var p * ListNode
+	var p *ListNode
 
 	for l1 != nil && l2 != nil {
 		if p == nil {
@@ -24,7 +24,7 @@ func addTwoNumbers(l1 *ListNode, l2 *ListNode) *ListNode {
 		}
 		s := l1.Val + l2.Val + r
 		if s > 10 {
-			s = s%10
+			s = s % 10
 			r = 1
 		}
 		p.Val = s
