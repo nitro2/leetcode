@@ -7,6 +7,7 @@ Just for fun.
 - Problem [add-two-numbers](https://leetcode.com/problems/add-two-numbers)
 - Problem [best-time-to-buy-and-sell-stock](https://leetcode.com/problems/best-time-to-buy-and-sell-stock)
 - Problem [consecutive-numbers-sum](https://leetcode.com/problems/consecutive-numbers-sum)
+- Problem [isomorphic-strings](https://leetcode.com/problems/isomorphic-strings)
 - Problem [longest-common-prefix](https://leetcode.com/problems/longest-common-prefix)
 - Problem [merge-k-sorted-lists](https://leetcode.com/problems/merge-k-sorted-lists)
 - Problem [merge-two-sorted-lists](https://leetcode.com/problems/merge-two-sorted-lists)
